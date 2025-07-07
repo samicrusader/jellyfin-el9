@@ -9,6 +9,7 @@ mkdir jellyfin-nupkgs
 dotnet restore --packages ./jellyfin-nupkgs
 mkdir jellyfin-nupkgs-system
 pushd jellyfin-nupkgs-system
+curl -L https://www.nuget.org/api/v2/package/Microsoft.NETCore.App.Host.linux-x64/8.0.16 > Microsoft.NETCore.App.Host.linux-x64.8.0.16.nupkg
 curl -L https://www.nuget.org/api/v2/package/runtime.any.System.Collections/4.3.0 > runtime.any.system.collections.4.3.0.nupkg
 curl -L https://www.nuget.org/api/v2/package/runtime.any.System.Diagnostics.Tracing/4.3.0 > runtime.any.system.diagnostics.tracing.4.3.0.nupkg
 curl -L https://www.nuget.org/api/v2/package/runtime.any.System.Globalization/4.3.0 > runtime.any.system.globalization.4.3.0.nupkg

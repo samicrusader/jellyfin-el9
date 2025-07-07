@@ -7,7 +7,7 @@
 %else
 %define         dotnet_arch x64
 %endif
-%global         dotnet_runtime_id  rhel.%{?rhel}-%{dotnet_arch}
+%global         dotnet_runtime_id  linux-%{dotnet_arch}
 %endif
 
 Name:           jellyfin
@@ -46,7 +46,7 @@ BuildRequires:  dotnet-sdk-8.0
 
 # jellyfin-web
 BuildRequires:  nodejs >= 20.0.0
-BuildRequires:  nodejs-npm >= 9.6.4
+BuildRequires:  npm >= 9.6.4
 
 Requires: %{name}-server = %{version}-%{release}
 Requires: %{name}-web = %{version}-%{release}
